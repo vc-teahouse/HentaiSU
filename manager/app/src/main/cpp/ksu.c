@@ -30,6 +30,7 @@
 #define CMD_IS_UID_SHOULD_UMOUNT 13
 #define CMD_IS_SU_ENABLED 14
 #define CMD_ENABLE_SU 15
+
 #define CMD_ENABLE_KPM 100
 #define CMD_HOOK_TYPE 101
 #define CMD_GET_SUSFS_FEATURE_STATUS 102
@@ -58,9 +59,9 @@ bool become_manager(const char* pkg) {
 static bool is_lkm;
 int get_version() {
     int32_t version = -1;
-    int32_t lkm = 0;
-    ksuctl(CMD_GET_VERSION, &version, &lkm);
-    if (!is_lkm && lkm != 0) {
+    int32_t flags = 0;
+    ksuctl(CMD_GET_VERSION, &version, &flags);
+    if (!is_lkm && (flags & 0x1)) {
         is_lkm = true;
     }
     return version;
