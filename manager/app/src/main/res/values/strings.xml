@@ -5,7 +5,7 @@
     <string name="home_not_installed">Not installed</string>
     <string name="home_click_to_install">Click to install</string>
     <string name="home_working">Working</string>
-    <string name="home_working_version">Version: %d</string>
+    <string name="home_working_version">Version: %s</string>
     <string name="home_unsupported">Unsupported</string>
     <string name="home_unsupported_reason">No KernelSU driver detected on your kernel, wrong kernel?.</string>
     <string name="home_kernel">Kernel version</string>
@@ -62,7 +62,7 @@
     <string name="profile_selinux_context">SELinux context</string>
     <string name="profile_umount_modules">Umount modules</string>
     <string name="failed_to_update_app_profile">Failed to update App Profile for %s</string>
-    <string name="require_kernel_version" formatted="false">The current KernelSU version %d is too low for the manager to work properly. Please upgrade to version %d or higher!</string>
+    <string name="require_kernel_version" formatted="false">The current KernelSU version %s is too low for the manager to work properly. Please upgrade to version %s or higher!</string>
     <string name="settings_umount_modules_default">Umount modules by default</string>
     <string name="settings_umount_modules_default_summary">The global default value for \"Umount modules\" in App Profile. If enabled, it will remove all module modifications to the system for apps that don\'t have a profile set.</string>
     <string name="settings_susfs_toggle">Disable kprobe hooks</string>
@@ -369,7 +369,6 @@
     <string name="susfs_apply">Apply</string>
     <!-- SuSFS Reset Confirmation -->
     <string name="susfs_reset_confirm_title">Confirm Reset</string>
-    <string name="susfs_reset_confirm">Confirm Reset</string>
     <!-- SuSFS Toast Messages -->
     <string name="susfs_binary_not_found">Cannot find ksu_susfs file</string>
     <string name="susfs_command_failed">SuSFS command execution failed</string>
@@ -392,8 +391,6 @@
     <string name="susfs_tab_try_umount">Try Umount</string>
     <string name="susfs_tab_path_settings">Path Settings</string>
     <string name="susfs_tab_enabled_features">Enabled Features Status</string>
-    <!-- SuSFS Dialog Actions -->
-    <string name="susfs_add">Add</string>
     <!-- SuSFS Path Management -->
     <string name="susfs_add_sus_path">Add SUS Path</string>
     <string name="susfs_add_sus_mount">Add SUS Mount</string>
@@ -493,11 +490,9 @@
     <string name="file_or_directory_path_label">File/Directory Path</string>
     <string name="hint_use_default_value">Hint: You can use ”default“ to use the original value</string>
     <string name="add_kstat_path_title">Add Kstat Path</string>
-    <string name="kstat_command_description">This command is used to add before the path is bind-mounted or overlaid, storing the original stat information in kernel memory.</string>
     <string name="add">Add</string>
     <string name="reset_kstat_config_title">Reset Kstat Configuration</string>
     <string name="reset_kstat_config_message">Are you sure you want to clear all Kstat configurations? This action cannot be undone.</string>
-    <string name="confirm_reset">Confirm Reset</string>
     <string name="kstat_config_description_title">Kstat Configuration Description</string>
     <string name="kstat_config_description_add_statically">• add_sus_kstat_statically: Static stat info of files/directories</string>
     <string name="kstat_config_description_add">• add_sus_kstat: Add path before bind mount, storing original stat info</string>
@@ -519,4 +514,77 @@
     <string name="susfs_hide_mounts_setting_all">Hide for all processes</string>
     <string name="susfs_hide_mounts_setting_non_ksu">Hide only for non-KSU processes</string>
     <string name="susfs_run">Run</string>
+    <string name="kernel_simple_kernel">Kernel Version Concise Mode</string>
+    <string name="kernel_simple_kernel_summary">Enable or disable the clean mode displayed by the SukiSU kernel version</string>
+    <string name="susfs_android_data_path_set">Android Data path has been set to: %s</string>
+    <string name="susfs_sdcard_path_set">SD card path has been set to: %s</string>
+    <string name="susfs_path_setup_warning">Path setup may not be fully successful, but SUS paths will continue to be added</string>
+    <!-- 备份和还原相关字符串 -->
+    <string name="susfs_backup_title">Backup</string>
+    <string name="susfs_backup_description">Create a backup of all SuSFS configurations. The backup file will include all settings, paths, and configurations.</string>
+    <string name="susfs_backup_create">Create Backup</string>
+    <string name="susfs_backup_success">Backup created successfully: %s</string>
+    <string name="susfs_backup_failed">Backup creation failed: %s</string>
+    <string name="susfs_backup_file_not_found">Backup file not found</string>
+    <string name="susfs_backup_invalid_format">Invalid backup file format</string>
+    <string name="susfs_backup_version_mismatch">Backup version mismatch, but will attempt to restore</string>
+    <string name="susfs_restore_title">Restore</string>
+    <string name="susfs_restore_description">Restore SuSFS configurations from a backup file. This will overwrite all current settings.</string>
+    <string name="susfs_restore_select_file">Select Backup File</string>
+    <string name="susfs_restore_success" formatted="false">Configuration restored successfully from backup created on %s from device: %s</string>
+    <string name="susfs_restore_failed">Restore failed: %s</string>
+    <string name="susfs_restore_confirm_title">Confirm Restore</string>
+    <string name="susfs_restore_confirm_description">This will overwrite all current SuSFS configurations. Are you sure you want to continue?</string>
+    <string name="susfs_restore_confirm">Restore</string>
+    <string name="susfs_backup_info_date">Backup Date: %s</string>
+    <string name="susfs_backup_info_device">Device: %s</string>
+    <string name="susfs_backup_info_version">Version: %s</string>
+    <string name="hide_bl_script">Hide BL Script</string>
+    <string name="hide_bl_script_description">Enable Hide Bootloader Unlock Status Scripts</string>
+    <string name="cleanup_residue">Cleanup Residue</string>
+    <string name="cleanup_residue_description">Clean up the residual files and directories of various modules and tools (may be deleted by mistake, resulting in loss and failure to start, use with caution)</string>
+    <string name="susfs_edit_sus_path">Edit SUS Path</string>
+    <string name="susfs_edit_sus_mount">Edit SUS Mount</string>
+    <string name="susfs_edit_try_umount">Edit Try Umount</string>
+    <string name="edit_kstat_statically_title">Edit Kstat Static Configuration</string>
+    <string name="edit_kstat_path_title">Edit Kstat Path</string>
+    <string name="susfs_save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
+    <string name="kstat_config_updated">Kstat config update</string>
+    <string name="kstat_path_updated">Kstat path update</string>
+    <string name="susfs_update_full_clone">Susfs update full clone</string>
+    <string name="umount_zygote_iso_service">Unmount Zygote Isolation Service</string>
+    <string name="umount_zygote_iso_service_description">Enable this option to unmount Zygote isolation service mount points at system startup</string>
+    <string name="umount_zygote_iso_service_enabled">Zygote isolation service unmount enabled</string>
+    <string name="umount_zygote_iso_service_disabled">Zygote isolation service unmount disabled</string>
+    <string name="app_paths_section">Application Path</string>
+    <string name="other_paths_section">Other paths</string>
+    <string name="add_custom_path">Other</string>
+    <string name="add_app_path">App</string>
+    <string name="susfs_add_app_path">Add App Path</string>
+    <string name="search_apps">Search Apps</string>
+    <string name="selected_apps_count">%1$d apps selected</string>
+    <string name="already_added_apps_count">%1$d apps already added</string>
+    <string name="all_apps_already_added">All apps have been added</string>
+    <string name="dynamic_sign_title">Dynamic Signature Configuration</string>
+    <string name="dynamic_sign_enabled_summary">Enabled (Size: %s)</string>
+    <string name="dynamic_sign_disabled">Disabled</string>
+    <string name="enable_dynamic_sign">Enable Dynamic Signature</string>
+    <string name="signature_size">Signature Size</string>
+    <string name="signature_hash">Signature Hash</string>
+    <string name="hash_must_be_64_chars">Hash must be 64 hexadecimal characters</string>
+    <string name="dynamic_sign_set_success">Dynamic signature configuration set successfully</string>
+    <string name="dynamic_sign_set_failed">Failed to set dynamic signature configuration</string>
+    <string name="invalid_sign_config">Invalid signature configuration</string>
+    <string name="dynamic_sign_disabled_success">Dynamic signature disabled</string>
+    <string name="dynamic_sign_clear_failed">Failed to clear dynamic signature</string>
+    <string name="dynamic_signature">Dynamic</string>
+    <string name="signature_index">Signature %1$d</string>
+    <string name="unknown_signature">Unknown</string>
+    <string name="multi_manager_list">Active Manager</string>
+    <string name="no_active_manager">No active manager</string>
+    <string name="default_signature">SukiSU</string>
+    <string name="home_zygisk_implement">Zygisk implement</string>
 </resources>
