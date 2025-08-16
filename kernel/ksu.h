@@ -23,9 +23,6 @@
 #define CMD_UID_SHOULD_UMOUNT 13
 #define CMD_IS_SU_ENABLED 14
 #define CMD_ENABLE_SU 15
-
-#define CMD_GET_FULL_VERSION 0xC0FFEE1A
-
 #define CMD_ENABLE_KPM 100
 #define CMD_HOOK_TYPE 101
 #define CMD_GET_SUSFS_FEATURE_STATUS 102
@@ -42,11 +39,6 @@
 #define KSU_MAX_GROUPS 32
 #define KSU_SELINUX_DOMAIN 64
 
-// SukiSU Ultra kernel su version full strings
-#ifndef KSU_VERSION_FULL 
-#define KSU_VERSION_FULL "v3.x-00000000@unknown"
-#endif
-#define KSU_FULL_VERSION_STRING 255
 
 #define DYNAMIC_SIGN_OP_SET 0
 #define DYNAMIC_SIGN_OP_GET 1
