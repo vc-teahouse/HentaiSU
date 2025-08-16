@@ -1,5 +1,9 @@
 #!/bin/env bash
 
+if [ ! -z "$2" ];then
+	export TITLE="Spoofed $TITLE"
+fi
+
 msg="*$TITLE*
 \\#ci\\_$VERSION
 \`\`\`
