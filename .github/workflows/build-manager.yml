@@ -249,14 +249,14 @@ jobs:
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
-        if: ${{ matrix.spoofed == 'false' }} && ${{ ( github.event_name != 'pull_request' && github.ref == 'refs/heads/main' ) || github.ref_type == 'tag' }}
+        if: ${{ ( matrix.spoofed == 'false' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' ) || ( matrix.spoofed == 'false' && github.ref_type == 'tag' ) }}
         with:
           name: manager
           path: manager/app/build/outputs/apk/release/*.apk
 
       - name: Upload spoofed build artifact
         uses: actions/upload-artifact@v4
-        if: ${{ matrix.spoofed == 'true' }} && ${{ ( github.event_name != 'pull_request' && github.ref == 'refs/heads/main' ) || github.ref_type == 'tag' }}
+        if: ${{ ( matrix.spoofed == 'true' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' ) || ( matrix.spoofed == 'true' && github.ref_type == 'tag') }}
         with:
           name: spoofed-manager
           path: manager/app/build/outputs/apk/release/*.apk
