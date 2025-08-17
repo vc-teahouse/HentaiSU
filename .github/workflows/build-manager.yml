@@ -130,7 +130,7 @@ jobs:
 
   build-manager:
     if: ${{ always() }}
-    needs: build-ksud
+    needs: [build-ksud,build-kpmmgr,build-susfs]
     runs-on: ubuntu-latest
     strategy:
       matrix:
